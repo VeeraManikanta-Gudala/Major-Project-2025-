@@ -11,6 +11,9 @@ if not cap.isOpened():
     print("Failed to connect to the RTSP stream.")
     exit()
 
+cap.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
+cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
+
 # Displaying the stream with YOLOv8 object detection
 while True:
     ret, frame = cap.read()
